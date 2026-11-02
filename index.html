@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+
+            <nav>
+                <img src="images/logo.png" class="logo">
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hello, I'm <span>Priyanka</span><br> from India</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <!---------------about---------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+
+                    <p>
+                        Hello! I'm an Engineering student at GSSSIETW, Mysuru.
+                        I am passionate about software development, Artificial Intelligence,
+                        Machine Learning, and Data Analytics. I enjoy learning new technologies,
+                        solving problems, and building projects that turn ideas into practical solutions.
+                        I have experience working with ML, web development, DSA, Python, Java,
+                        DBMS, and Data Analysis using Excel. I am continuously improving my technical
+                        and problem-solving skills through academic projects, internships, and hands-on learning.
+                        My goal is to become a skilled software professional, contribute to innovative
+                        projects, and create meaningful solutions through technology.
+                    </p>
+
+                    <div class="tab-titles">
+
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+
+                        <p class="tab-links" onclick="opentab('education')">
+                            Education
+                        </p>
+
+                    </div>
+
+                    <!-- Skills -->
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>UI/UX Design</span><br>
+                                Designing web/App interfaces
+                            </li>
+
+                            <li>
+                                <span>Web Development</span><br>
+                                Web app Development
+                            </li>
+
+                            <li>
+                                <span>Full Stack Development</span><br>
+                                Full stack web development
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Experience -->
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>Aug/2026-Oct/2026</span><br>
+                                Machine Learning Intern
+                            </li>
+
+                            <li>
+                                <span>Oct/2026-Nov/2026</span><br>
+                                Full Stack Developer Intern
+                            </li>
+
+                            <li>
+                                <span>2025-Present</span><br>
+                                Developing skills and working on projects
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Education -->
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2025 - 2028</span><br>
+                                Bachelor of Engineering (B.E.) at GSSSIETW, Mysuru
+                            </li>
+
+                            <li>
+                                <span>2022-2024</span><br>
+                                PUC at JSS PU College
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+
+    <div id="services">
+        <div class="container">
+
+            <h1 class="sub-title">My Services</h1>
+
+            <div class="services-list">
+
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        Creating attractive, user-friendly, and easy-to-use interfaces
+                        for websites and mobile applications. Focusing on user experience,
+                        creative layouts, visual design, and improving user interaction.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        Designing modern, responsive, and visually appealing websites
+                        using HTML, CSS, and JavaScript. Creating clean layouts,
+                        attractive designs, and smooth navigation to provide a better
+                        experience for users.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Full Stack Development</h2>
+                    <p>
+                        Developing complete web applications by working on both frontend
+                        and backend technologies. Building interactive user interfaces,
+                        managing databases, handling server-side operations, and creating
+                        functional web applications.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+</body>
+</html>
